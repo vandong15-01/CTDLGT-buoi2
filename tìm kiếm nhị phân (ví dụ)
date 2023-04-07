@@ -1,0 +1,45 @@
+https://freetuts.net/thuat-toan-tim-kiem-nhi-phan-2634.html
+
+
+#include <bits/stdc++.h>
+sử dụng không gian tên std;
+ 
+//Hàm tìm kiếm nhi phân
+int binarySearch(int arr[], int left, int right, int x) {
+    giữa;
+ 
+    trong khi (trái <= phải) {
+        // Lấy vị trí ở giữa trái và phải
+        giữa = (trái + phải)/2;
+ 
+        // If section from at between by x then return
+        // vị trí
+        nếu (mảng [giữa] == x)
+            trở về giữa;
+ 
+        // If x large more than phần tử ở giữa thì
+        // chắc chắn nó nằm bên phải.
+        // Only left section from between + 1
+        nếu (x > mảng[giữa])
+            trái = giữa + 1;
+        khác
+            //Reverse
+            phải = giữa - 1;
+    }
+ 
+    //Trả về -1 nếu không tìm thấy giá trị trong mảng.
+    trả về -1;
+}
+int main() {
+    mảng int[] = {15, 20, 25, 30, 31, 44, 66};
+ 
+    //Lấy độ dài của mảng
+    int n = sizeof(mảng) / sizeof(mảng[0]);
+    //Phần từ cần tìm
+    int x = 25;
+     
+    // n -1 is the end of the position in array.
+    int result = binarySearch(arr, 0, n-1, x);
+ 
+    cout<<kết quả;
+}
